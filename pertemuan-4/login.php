@@ -19,7 +19,6 @@
             text-decoration: none;
             margin: 4px 2px;
             cursor: pointer;
-            
         }
     </style>
 </head>
@@ -31,6 +30,7 @@
         <label>Password</label>
         <input class="inputan" type="password" name="password">
         <input type="submit" name="tombolsubmit" value="Login">
+        <a href="registrasi.php" class="tombol">Registrasi</a>
         </form>
 </body>
 </html>
