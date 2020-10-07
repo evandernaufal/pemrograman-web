@@ -19,7 +19,9 @@
     email : <?php echo $email ?> 
 <?php
     }
+    else{
+        echo "Mohon maaf konfirmasi tidak bisa diakses langsung";
+    }
 ?>
-
 </body>
 </html>
