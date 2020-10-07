@@ -16,7 +16,7 @@ session_start();
     }
     else{
         header("Location: login.php");
-        //echo "Mohon maaf cek login tidak bisa diakses langsung";
+        //echo "Mohon maaf cek login tidak dapat diakses langsung";
     } 
-    
+
 ?>
