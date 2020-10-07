@@ -15,7 +15,7 @@ session_start();
         }
     }
     else{
-        header("Username/password ada yang salah")
+        header("Location: login.php");
         //echo "Mohon maaf cek login tidak bisa diakses langsung";
     } 
 ?>
