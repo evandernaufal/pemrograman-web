@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Falevan Book</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+		/* Dari sini merupakan CSS */
+		* {
+		  	box-sizing: border-box;
+		}
+		/* Style untuk seluruh isi di body */
+		body {
+			background-color:#f1f1f1;
+			font-family: "Times New Roman", Times, serif;
+		}
+		/* Style untuk seluruh isi di header */
+		.header {
+		  	font-family: "Lucida Console", Courier, monospace;
+		  	padding: 140px;
+		  	text-align: center;
+		  	font-size: 40px;
+		}
+		/* Style untuk seluruh isi di topnavbar dengan posisi fixed */
+		.topnavbar {
+		  	overflow: hidden;
+		  	background-color: black;
+		  	position: fixed;
+		  	top: 0;
+		  	left: 0;
+		  	width: 100%;
+		  	opacity: 0.75;
+		}
+		/* Style untuk seluruh isi di button topnavbar */
+		.topnavbar a {
+		  	float: left;
+		  	color: white;
+		  	text-align: center;
+		  	padding: 14px 16px;
+		  	text-decoration: none;
+		  	font-size: 17px;
+  			transition: transform 2s;
+		}
+		/* Style untuk mengganti warna hover */
+		.topnavbar a:hover {
+		  	background-color: #ddd;
+		  	color: black;
+		  	transform: rotate(360deg);
+		}
+		/* Create three unequal columns that floats next to each other */
+		.column {
+		  	float: left;
+		  	padding: 10px;
+		  	margin-bottom: 30px;
+		  	font-family: "Times New Roman", Times, serif;
+		}
+		/* lebar dr kolom kanan */
+		.column.right {
+		  	width: 30%;
+		}
+		/* lebar dari kolom konten */
+		.column.content {
+		  	width: 35%;
+		}
+		/* lebar dari kolom event */
+		.column.event {
+		  	width: 70%;
+		}
+		/* Style untuk card pada konten */
+		.card {
+		  	background-color: white;
+		  	padding: 20px;
+		  	margin-top: 20px;
+		  	text-align: center;
+		  	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 10px 0 rgba(0, 0, 0, 0);
+		}
+		/* Style untuk menghapus floats setelah kolom atau dapat menampilkan sesuatu setelah row*/
+		.row:after {
+		  	content: "";
+		  	display: table;
+		  	clear: both;
+		}
+		/* Style untuk seluruh isi di footer */
+		.footer {
+		  	padding: 10px;
+		  	text-align: center;
+		}
+		</style>
+	</head>
+	<body>
+		<!-- Navbar atas fixed, langsung ke tujuan saat di klik menunya -->
+		<div class="topnavbar">
+			<h3>
+				<a href="#home">Home</a>
+				<a href="#library">Library</a>
+				<a href="#event">Event</a>
+				<a href="#contactus">Contact Us</a>
+			</h3>
+		</div>
+		<!-- Header webpage -->
+		<div class="header" id="home">
+			<h2>Falevan Book</h2><br>
+			<h5>Welcome to Official Website of Falevan Book <br><br> By Evander Naufal</h5>
+		</div>
+		<!-- Isi dari webpage -->
+		<div class="row">
+			<!-- menu library -->
+			<h1 id="library" style="padding-left: 15px; padding-top: 70px">Library</h1>
+			<!-- Kolom konten kiri -->
+		 	<div class="column content">
+		 		<!-- Konten 1 -->
+		    	<div class="card">
+		    		<h1>Janji Daun Ivy</h1>
+		    		<a target="_blank" href="https://books.google.com/books/content/images/frontcover/GtVfDwAAQBAJ?fife=w200-h300">
+		    			<img src="https://books.google.com/books/content/images/frontcover/GtVfDwAAQBAJ?fife=w200-h300" alt="Image Janji Daun Ivy" style="width: 200px">
+		    		</a> 
+		    		<div style="text-align: left;">
+		    			<br>
+		    			<b>Writter : </b>
+		    			<i>Evander Naufal</i><br>
+		    			<b>Date Release : </b>
+		    			<i>June 2018</i><br>
+		    			<h3>Synopsis</h3>
+		    			<p>Sebuah persahabatan, sebuah percintaan, sebuah perdebatan, dan sebuah janji. Nama aku Samudra. Aku terlahir sebagai anak ke empat dari lima bersaudara. Hidup ini sangatlah sulit. Namun, sejak mempunyai seorang kakak baru, hidupku sedikit lebih baik. Aku adalah orang yang nggak suka berjanji. Namun, temanku ini sangatlah taat pada janji. Apakah aku bisa bertahan hidup dengan seseorang yang taat pada janji.</p>
+		    		</div>
+		    		<h4>Read on</h4>
+		    		<a target="_blank" href="https://play.google.com/store/books/details/Janji_Daun_Ivy?id=GtVfDwAAQBAJ&hl=en_IN">
+		    			<img src="https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png" alt="Image GooglePlay Logo" style="width: 120px">
+		    		</a> 
+		      		<a target="_blank" href="https://www.wattpad.com/story/148441676-janji-daun-ivy">
+		    			<img src="https://www.wattpad.com/img//logos/wp-logo-orange.png" alt="Image Wattpad Logo" style="width: 120px">
+		    		</a> 
+		    	</div>
+		    	<!-- konten 3 -->
+		    	<div class="card">
+		    		<h1>Janji Daun Ivy</h1>
+		    		<a target="_blank" href="https://books.google.com/books/content/images/frontcover/GtVfDwAAQBAJ?fife=w200-h300">
+		    			<img src="https://books.google.com/books/content/images/frontcover/GtVfDwAAQBAJ?fife=w200-h300" alt="Image Janji Daun Ivy" style="width: 200px">
+		    		</a> 
+		    		<div style="text-align: left;">
+		    			<br>
+		    			<b>Writter : </b>
+		    			<i>Evander Naufal</i><br>
+		    			<b>Date Release : </b>
+		    			<i>June 2018</i><br>
+		    			<h3>Synopsis</h3>
+		    			<p>Sebuah persahabatan, sebuah percintaan, sebuah perdebatan, dan sebuah janji. Nama aku Samudra. Aku terlahir sebagai anak ke empat dari lima bersaudara. Hidup ini sangatlah sulit. Namun, sejak mempunyai seorang kakak baru, hidupku sedikit lebih baik. Aku adalah orang yang nggak suka berjanji. Namun, temanku ini sangatlah taat pada janji. Apakah aku bisa bertahan hidup dengan seseorang yang taat pada janji.</p>
+		    		</div>
+		    		<h4>Read on</h4>
+		    		<a target="_blank" href="https://play.google.com/store/books/details/Janji_Daun_Ivy?id=GtVfDwAAQBAJ&hl=en_IN">
+		    			<img src="https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png" alt="Image GooglePlay Logo" style="width: 120px">
+		    		</a> 
+		      		<a target="_blank" href="https://www.wattpad.com/story/148441676-janji-daun-ivy">
+		    			<img src="https://www.wattpad.com/img//logos/wp-logo-orange.png" alt="Image Wattpad Logo" style="width: 120px">
+		    		</a> 
+		    	</div>
+		  	</div>
+		  	<!-- Kolom konten kanan -->
+		  	<div class="column content">
+		  		<!-- Konten 2 -->
+		    	<div class="card">
+		    		<h1>Mengapa Aku Terlahir di Keluarga Ini?</h1>
+		    		<a target="_blank" href="https://books.google.com/books/content/images/frontcover/mqdhDwAAQBAJ?fife=w200-h300">
+		    			<img src="https://books.google.com/books/content/images/frontcover/mqdhDwAAQBAJ?fife=w200-h300" alt="Image Mengapa Aku Terlahir di Keluarga Ini?" style="width: 200px">
+		    		</a> 
+		    		<div style="text-align: left;">
+		    			<br>
+		    			<b>Writter : </b>
+		    			<i>Evander Naufal</i><br>
+		    			<b>Date Release : </b>
+		    			<i>December 2016</i><br>
+		    			<h3>Synopsis</h3>
+		    			<p> Pertemanan yang di ganggu oleh percintaan dalam kehidupan seorang pelajar sangatlah berat. Aku selalu bertanya-tanya, mengapa aku terlahir di keluarga yang seperti ini. Siapakah aku dan bagaimana aku bisa terlahir. Dapatkah aku menemukan jawabannya. </p>
+		    		</div>
+		    		<h4>Read on</h4>
+		    		<a target="_blank" href="https://play.google.com/store/books/details/Evander_Naufal_Mengapa_Aku_Terlahir_di_Keluarga_in?id=mqdhDwAAQBAJ&hl=en_IN">
+		    			<img src="https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png" alt="Image GooglePlay Logo" style="width: 120px">
+		    		</a> 
+		      		<a target="_blank" href="https://www.wattpad.com/story/59123550-mengapa-aku-terlahir-di-keluarga-ini-season-1">
+		    			<img src="https://www.wattpad.com/img//logos/wp-logo-orange.png" alt="Image Wattpad Logo" style="width: 120px">
+		    		</a> 
+		    	</div>
+		    	<!-- Konten 4 -->
+		    	<div class="card">
+		    		<h1>Mengapa Aku Terlahir di Keluarga Ini?</h1>
+		    		<a target="_blank" href="https://books.google.com/books/content/images/frontcover/mqdhDwAAQBAJ?fife=w200-h300">
+		    			<img src="https://books.google.com/books/content/images/frontcover/mqdhDwAAQBAJ?fife=w200-h300" alt="Image Mengapa Aku Terlahir di Keluarga Ini?" style="width: 200px">
+		    		</a> 
+		    		<div style="text-align: left;">
+		    			<br>
+		    			<b>Writter : </b>
+		    			<i>Evander Naufal</i><br>
+		    			<b>Date Release : </b>
+		    			<i>December 2016</i><br>
+		    			<h3>Synopsis</h3>
+		    			<p> Pertemanan yang di ganggu oleh percintaan dalam kehidupan seorang pelajar sangatlah berat. Aku selalu bertanya-tanya, mengapa aku terlahir di keluarga yang seperti ini. Siapakah aku dan bagaimana aku bisa terlahir. Dapatkah aku menemukan jawabannya. </p>
+		    		</div>
+		    		<h4>Read on</h4>
+		    		<a target="_blank" href="https://play.google.com/store/books/details/Evander_Naufal_Mengapa_Aku_Terlahir_di_Keluarga_in?id=mqdhDwAAQBAJ&hl=en_IN">
+		    			<img src="https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png" alt="Image GooglePlay Logo" style="width: 120px">
+		    		</a> 
+		      		<a target="_blank" href="https://www.wattpad.com/story/59123550-mengapa-aku-terlahir-di-keluarga-ini-season-1">
+		    			<img src="https://www.wattpad.com/img//logos/wp-logo-orange.png" alt="Image Wattpad Logo" style="width: 120px">
+		    		</a> 
+		    	</div>
+		    	<a href="#library" style="text-align: right;  text-decoration: none; color: black; text-shadow: 2px 2px white;"><p>More Books...</p></a>
+		  	</div>
+		  	<!-- Kolom kanan webpage -->
+		  	<div class="column right">
+			    <div class="card">
+			     	<h2>Coming Soon</h2><hr>
+			     	<h3>Album Vava</h3>
+			     	<img src="https://scontent-xsp1-1.xx.fbcdn.net/v/t1.0-9/119945421_361903401672666_9177854823716797081_n.jpg?_nc_cat=105&_nc_sid=730e14&_nc_ohc=8b-dMMPCppcAX-PwleP&_nc_ht=scontent-xsp1-1.xx&oh=b8f4a8acf0c202f2b1aea1ad844eedbd&oe=5F9242D6" alt="Gambar belum tersedia" style="width: 200px">
+			    </div>
+			    <div class="card">
+			     	<h2>Best Seller</h2><hr>
+			     	<a target="_blank" href="https://play.google.com/store/books/details/Janji_Daun_Ivy?id=GtVfDwAAQBAJ&hl=en_IN" style="text-decoration: none; color: black">
+		    			<h3>Janji Daun Ivy</h3>
+		    		</a> 
+			     	<a target="_blank" href="https://books.google.com/books/content/images/frontcover/GtVfDwAAQBAJ?fife=w200-h300">
+		    			<img src="https://books.google.com/books/content/images/frontcover/GtVfDwAAQBAJ?fife=w200-h300" alt="Image Janji Daun Ivy" >
+		    		</a> 
+			    </div>
+			    <div class="card" >
+			     	<h2>About Author</h2><hr>
+			     	<a target="_blank"  href="https://images.gr-assets.com/authors/1528271157p8/18094883.jpg">
+		    			<img style="width: 200px" src="https://images.gr-assets.com/authors/1528271157p8/18094883.jpg" alt="Image Author"  >
+		    		</a>
+			     	<p>Seorang penulis dan editor yang hobinya berkhayal. Tinggal di Tangerang Selatan bersama orang tuanya dan dua orang saudara. Baru saja menyelesaikan sekolahnya di SMA Negeri 6 kota Tangerang Selatan pada tahun 2018. Kisahnya yang unik membuat penulis selalu ingin mengungkapkan perasaannya melalui buku ini. </p>
+			    </div>
+		  	</div>
+		</div>
+		<div class="row">
+			<!-- menu event -->
+			<h1 id="event" style="padding-left: 15px; padding-top: 70px">Event</h1>
+			<div class="column event">
+		  		<!-- event 1 -->
+		    	<div class="card" style="text-align: left;">
+		    		<h2>Bedah Buku Janji Daun Ivy</h2>
+		    		<b>Date event : </b>
+		    		<i>19 December 2018</i><br>
+		    		<p style="text-align: center;">
+		    			<a target="_blank" href="https://scontent-xsp1-2.xx.fbcdn.net/v/t1.0-9/119938651_361904298339243_3865322675022447018_n.jpg?_nc_cat=107&_nc_sid=730e14&_nc_ohc=DBdbG18lMEYAX_3ijmi&_nc_ht=scontent-xsp1-2.xx&oh=6a7a6ab7c0f86b18cd44726ac22b6729&oe=5F910813">
+		    				<img src="https://scontent-xsp1-2.xx.fbcdn.net/v/t1.0-9/119938651_361904298339243_3865322675022447018_n.jpg?_nc_cat=107&_nc_sid=730e14&_nc_ohc=DBdbG18lMEYAX_3ijmi&_nc_ht=scontent-xsp1-2.xx&oh=6a7a6ab7c0f86b18cd44726ac22b6729&oe=5F910813" alt="Event Bedah Buku Janji Daun Ivy" style="width: 800px; height: 350px">
+		    			</a>
+		    		</p>
+		    		<P>This event will be available on Goodreads, so if you want to join and know about writter, create account on Goodreads and join this event. See You...</P>
+		    		<h3 style="text-align: center;">JOIN NOW <br>
+		    			<a target="_blank" href="https://www.goodreads.com/evandernaufal"> 
+		    				<img src="https://s.gr-assets.com/assets/home/header_logo-8d96d7078a3d63f9f31d92282fd67cf4.png" alt="Image Goodreads Logo" style="align-content: right; width: 120px">
+		    			</a>
+		    		</h3> 
+		    	</div>
+		    	<!-- event 2 -->
+		    	<div class="card" style="text-align: left;">
+		    		<h2>Giveaway from Janji Daun Ivy</h2>
+		    		<b>Date event : </b>
+		    		<i>1 November 2018</i><br>
+		    		<p style="text-align: center;">
+		    			<img target="_blank" src="https://scontent-xsp1-1.xx.fbcdn.net/v/t1.0-9/119945421_361903401672666_9177854823716797081_n.jpg?_nc_cat=105&_nc_sid=730e14&_nc_ohc=8b-dMMPCppcAX-PwleP&_nc_ht=scontent-xsp1-1.xx&oh=b8f4a8acf0c202f2b1aea1ad844eedbd&oe=5F9242D6" alt="Event Giveaway Janji Daun Ivy" style="width: 800px; height: 350px">
+		    		</p>
+		    		<P>Be The Witness from Janji Daun Ivy! This event will be available on Goodreads, so if you want to join giveaway and win prizes, create account on Goodreads and join this event. See You...</P>
+		    		<h3 style="text-align: center;">JOIN NOW <br>
+		    			<a target="_blank" href="https://www.goodreads.com/evandernaufal"> 
+		    				<img src="https://s.gr-assets.com/assets/home/header_logo-8d96d7078a3d63f9f31d92282fd67cf4.png" alt="Image Goodreads Logo" style="align-content: right; width: 120px">
+		    			</a>
+		    		</h3> 
+		    	</div>
+		    </div>
+		    <!-- Kolom kanan webpage -->
+			<div class="column right">
+				<div class="card" style="padding-top: 45px; padding-bottom: 45px">
+			     	<h2>Social Media</h2><hr>
+			     	<a target="_blank" href="https://www.facebook.com/evander.naufal/"> 
+		    			<img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Image Facebook Logo" style="align-content: right; width: 120px">
+		    		</a><br><br>
+			     	<a target="_blank" href="https://www.instagram.com/evandernaufal/"> 
+		    			<img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="Image Instagram Logo" style="align-content: right; width: 120px">
+		    		</a><br><br>
+		    		<a target="_blank" href="https://www.wattpad.com/user/evander_naufal"> 
+		    			<img src="https://www.wattpad.com/img//logos/wp-logo-orange.png" alt="Image Wattpad Logo" style="align-content: right; width: 120px">
+		    		</a><br><br>
+			     	<a target="_blank" href="https://www.goodreads.com/evandernaufal"> 
+		    			<img src="https://s.gr-assets.com/assets/home/header_logo-8d96d7078a3d63f9f31d92282fd67cf4.png" alt="Image Goodreads Logo" style="align-content: right; width: 120px">
+		    		</a>
+		    		<h3>Get All My E-Books on</h3>
+		    		<a target="_blank" href="https://play.google.com/store/books/author?id=Evander+Naufal&hl=en_IN">
+		    			<img src="https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png" alt="Image GooglePlay Logo" style="width: 120px">
+		    		</a> 
+				</div>
+				<!-- menu Contact Us -->
+				<div class="card" id="contactus" style="padding-top: 45px; padding-bottom: 45px">
+			     	<h2>Contact Us</h2><hr>
+			     	<h3 style="text-align: left;">Phone</h3>
+			     	<p style="text-align: left;">021 - 7455555</p>
+			     	<h3 style="text-align: left;">Email</h3>
+			     	<p style="text-align: left;">cs@flvnbook.co.id</p>
+					<h3 style="text-align: left;">Address</h3>
+			     	<p style="text-align: left;">Jalan Cendrawasih Raya Blok B7/P, Sawah Baru, Kec. Ciputat, Kota Tangerang Selatan, Banten 15413</p>
+			     	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15863.1257531016!2d106.725451!3d-6.2924303!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x70288cde58f42a97!2sUniversitas%20Pembangunan%20Jaya!5e0!3m2!1sid!2sid!4v1600875321459!5m2!1sid!2sid" width="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				</div>
+			  </div>
+		</div>
+		<!-- Footer webpage -->
+		<div class="footer">
+			<hr>
+		  	<h3>&copy; Falevan Book 2020</h3>
+		</div>
+	</body>
+</html>
