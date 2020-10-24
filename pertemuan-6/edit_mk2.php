@@ -27,15 +27,15 @@
             }       
         }        
         else if (isset($_GET['kodemk'])) {
-            $_kodemk = $_GET['kodemk'];
-            $strSQL = "SELECT * FROM matakuliah WHERE kodemk='".$_kodemk."'";
+            $kodemk = $_GET['kodemk'];
+            $strSQL = "SELECT * FROM matakuliah WHERE kodemk='".$kodemk."'";
             $runStrSQL = mysqli_query($conn,$strSQL);
             $jmlRowData = mysqli_num_rows($runStrSQL);
             if ($jmlRowData > 0) {
                 while ($row = mysqli_fetch_assoc($runStrSQL)) {
-                    $_namamk = $row["namamk"];
-                    $_kategori = $row["kategori"];
-                    $_sks = $row["sks"];
+                    $namamk = $row["namamk"];
+                    $kategori = $row["kategori"];
+                    $sks = $row["sks"];
                 }
             }
         }
@@ -86,7 +86,7 @@
         ?>    
         <div class="alert alert-success alert-dismissible fade show">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
-            Data berhasil diinput ke dalam database.
+            Data berhasil diupdate ke dalam database.
         </div>
         <?php 
             }
@@ -94,7 +94,7 @@
         ?>
         <div class="alert alert-danger alert-dismissible fade show">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
-            Data tidak berhasil diinput ke dalam database.
+            Data tidak berhasil diupdate ke dalam database.
         </div>
         <?php 
             }
@@ -102,11 +102,11 @@
         <form id="myform" method="post" action="edit_mk2.php">
             <div class="form-group">
                 <label>Kode Mata Kuliah</label>
-                <input id="kodemk" class="form-control" type="text" name="kodemk" value="<?php echo $_kodemk ?>">
+                <input id="kodemk" class="form-control" type="text" name="kodemk" value="<?php echo $kodemk ?>" readonly>
             </div>
             <div class="form-group">
                 <label>Nama Mata Kuliah</label>
-                <input id="namamk" class="form-control" type="text" name="namamk" value="<?php echo $_namamk ?>" >
+                <input id="namamk" class="form-control" type="text" name="namamk" value="<?php echo $namamk ?>" >
             </div>
             <div class="form-group">
                 <label>Kategori Mata Kuliah</label>
@@ -119,7 +119,7 @@
             </div>
             <div class="form-group">
                 <label>SKS</label>
-                <input id="sks" class="form-control" type="text" name="sks" value="<?php echo $_sks ?>">
+                <input id="sks" class="form-control" type="text" name="sks" value="<?php echo $sks ?>">
             </div>           
                 <input class="btn btn-primary" type="button" id="tombol" value="Simpan" >   
         </form>
