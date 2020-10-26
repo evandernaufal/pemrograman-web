@@ -26,15 +26,15 @@
     <H1>Registrasi</H1>
     <form method="post" action="konfirmasi.php">
         <label>Username</label><br>
-        <input class="inputan" type="text" name="username"><br>
+        <input class="inputan" type="text" name="username" required><br>
         <label>Password</label><br>
-        <input class="inputan" type="password" name="password"><br>
+        <input class="inputan" type="password" name="password" required><br>
         <label>Nama Depan</label><br>
-        <input class="inputan" type="text" name="namadepan"><br>
+        <input class="inputan" type="text" name="namadepan" required><br>
         <label>Nama Belakang</label><br>
-        <input class="inputan" type="text" name="namabelakang"><br>
+        <input class="inputan" type="text" name="namabelakang" required><br>
         <label>Email</label><br>
-        <input class="inputan" type="email" name="email"><br>
+        <input class="inputan" type="email" name="email" required><br>
         <input type="submit" name="tombolsubmit" value="Daftar"><br>
         </form>
 </body>
