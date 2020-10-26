@@ -10,29 +10,17 @@
 <body>
     <?php   
         include_once "header.php";
-        include_once "koneksi.php"; 
-        $status = 2;  
-        if (isset($_POST["nim"])) {
-            $nim = $_POST["nim"];
-            $nama = $_POST["nama"];
-            $strsql = "UPDATE datamahasiswa SET nim='$nim', nama='$nama' WHERE nim='$nim'";
-            $runSQL = mysqli_query($conn, $strsql);       
-            if ($runSQL) {
-                $status = 1; //sukses
-            }  
-            else {
-                $status = 0; //tidak sukses;
-            }       
-        }        
-        else if (isset($_GET['id'])) {
+        include_once "koneksi.php";    
+        if (isset($_GET['id'])) {
             $_id = $_GET['id'];
-            $strSQL = "SELECT * FROM datamahasiswa WHERE id='".$_id."'";
+            $strSQL = "SELECT * FROM datamahasiswa WHERE id='$_id'";
             $runStrSQL = mysqli_query($conn,$strSQL);
             $jmlRowData = mysqli_num_rows($runStrSQL);
             if ($jmlRowData > 0) {
                 while ($row = mysqli_fetch_assoc($runStrSQL)) {
                     $nim = $row["nim"];
                     $nama = $row["nama"];
+                    $id = $row["id"];
                 }
             }
         }
@@ -70,27 +58,10 @@
             </div>
         </div>
         <!-- ini end modal -->
-        <?php 
-            if ($status == 1) {
-        ?>    
-        <div class="alert alert-success alert-dismissible fade show">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            Data berhasil diinput ke dalam database.
-        </div>
-        <?php 
-            }
-            else if ($status == 0){
-        ?>
-        <div class="alert alert-danger alert-dismissible fade show">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            Data tidak berhasil diinput ke dalam database.
-        </div>
-        <?php 
-            }
-        ?>
-        <form id="myform" method="post" action="edit.php">
+        <form id="myform" method="post" action="update.php">
             <div class="form-group">
                 <label>NIM</label>
+                <input id="id" class="form-control" type="hidden" name="id" value="<?php echo $id ?>">
                 <input id="nim" class="form-control" type="text" name="nim" value="<?php echo $nim ?>">
             </div>
             <div class="form-group">
