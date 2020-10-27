@@ -1,18 +1,14 @@
 <?php
-    include 'koneksi.php';
-    if (isset($_GET["kodemk"])) {
-        $kodemk   = $_GET['kodemk'];
-        // query SQL untuk insert data
-        $strsql="DELETE from matakuliah where kodemk='".$kodemk."'";
-        $runSQL = mysqli_query($conn, $strsql);       
-        if ($runSQL) {
-            $status = 1; //sukses
-        }  
-        else {
-            $status = 0; //tidak sukses;
-        }  
-    }else {
-        echo "Gagal";
+    error_reporting(0);
+    include "koneksi.php";
+    if (isset($_POST['delete'])) {
+        $pkodemk = $_POST["delete"];
+
+        $sql = "DELETE from matakuliah where kodemk='".$pkodemk."'";
+        if (mysqli_query($conn, $sql)) {
+            echo "<h3><span class='text-success'>Data Berhasil dihapus ! </span></h3>";
+        }else{
+            echo "<span class='text-primary'> Terjadi Kesalahan Coba lagi yah! </span>";
+        }
     }
-    header("location:listmatakuliah.php");
 ?>
