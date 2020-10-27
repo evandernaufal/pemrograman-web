@@ -69,7 +69,7 @@
                 <td><?php echo $row["sks"] ?></td>
                 <td>
                   <a href="edit_mk2.php?kodemk=<?php echo $row["kodemk"] ?>" class="btn btn-info">Edit</a>
-                  <a class="btn btn-danger delete_data" kodemk="<?php echo $row['namamk']?>-<?php echo $row['kategori']?>-<?php echo $row['sks']?>" href="javascript:void(0);">Hapus</a>
+                  <a class="btn btn-danger delete_data" id="<?php echo $row['kodemk']?>-<?php echo $row['namamk']?>-<?php echo $row['kategori']?>-<?php echo $row['sks']?>" href="javascript:void(0);">Hapus</a>
                 </td>
               </tr>
               <?php 
@@ -98,53 +98,48 @@
         $('#listtable').DataTable();
     } );
     </script>
-    
-</body>
-</html>
-<script>
-$(document).ready(function () {
-    $(document).on('click', '.delete_data', function (e) {
-        e.preventDefault();
-        var kodemk = $(this).prop('kodemk');
-        var splited = kodemk.split("-");
-        var pkodemk = splited[0];
-        var namamk = splited[1];
-        var kategori = splited[2];
-        var sks = splited[3];
-        var parent = $(this).parent("td").parent("tr");
-        var mes = 'Apakah anda ingin menghapus data ini ? <br><pre><p class="text-primary"><strong>Nama Mata Kuliah : ' + namamk + '</strong></p><p class="text-primary"><strong>Kategori Mata Kuliah : ' + kategori + '</strong></p><p class="text-primary"><strong>SKS Mata Kuliah : ' + sks + '</strong></p></pre>';
-        bootbox.dialog({
-            message: mes,
-            title: "Hapus Data yang dipilih !",
-            closeButton: true,
-            buttons: {
-                success: {
-                    label: "No",
-                    className: "btn-succes",
-                    callback: function () {
-                        $('.bootbox').modal('hide');
-                    }
-                },
-                danger: {
-                    label: "Remove",
-                    className: "btn-danger",
-                    callback: function () {
-
-                        $.post('hapus_mk2.php', { 'delete': pkodemk })
-                            .done(function (response) {
-                                bootbox.alert(response);
-                                parent.fadeOut('slow');
-
-                            })
-                            .fail(function () {
-                                bootbox.alert('Something Went Wrog ....');
-                            })
-
+    <script>
+      $(document).ready(function () {
+        $(document).on('click', '.delete_data', function (e) {
+            e.preventDefault();
+            var id = $(this).prop('id');
+            var splited = id.split("-");
+            var pkodemk = splited[0];
+            var namamk = splited[1];
+            var kategori = splited[2];
+            var sks = splited[3];
+            var parent = $(this).parent("td").parent("tr");
+            var mes = 'Apakah anda ingin menghapus data ini ? <br><pre><p class="text-primary"><strong>Nama Mata Kuliah : ' + namamk + '</strong></p><p class="text-primary"><strong>Kategori Mata Kuliah : ' + kategori + '</strong></p><p class="text-primary"><strong>SKS Mata Kuliah : ' + sks + '</strong></p></pre>';
+            bootbox.dialog({
+                message: mes,
+                title: "Hapus Data yang dipilih !",
+                closeButton: true,
+                buttons: {
+                    success: {
+                        label: "No",
+                        className: "btn-succes",
+                        callback: function () {
+                            $('.bootbox').modal('hide');
+                        }
+                    },
+                    danger: {
+                        label: "Remove",
+                        className: "btn-danger",
+                        callback: function () {
+                            $.post('hapus_mk2.php', { 'delete': pkodemk })
+                                .done(function (response) {
+                                    bootbox.alert(response);
+                                    parent.fadeOut('slow');
+                                })
+                                .fail(function () {
+                                    bootbox.alert('Something Went Wrog ....');
+                                })
+                        }
                     }
                 }
-            }
+            });
         });
-    });
-
-});
-</script>
+      });
+  </script>
+</body>
+</html>
