@@ -10,7 +10,7 @@
             header("location: listdatamahasiswa.php");
         }  
         else {
-            $status = 0; //tidak sukses;
+            die; //tidak sukses;
         }       
     }    
 ?>
