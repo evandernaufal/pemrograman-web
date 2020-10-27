@@ -38,6 +38,8 @@
                     $sks = $row["sks"];
                 }
             }
+        }else{
+            header("location:listmatakuliah.php");
         }
     ?>
     <div class="container">
