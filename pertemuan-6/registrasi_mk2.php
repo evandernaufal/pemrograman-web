@@ -102,7 +102,6 @@
             <div class="form-group">
                 <label>Kategori Mata Kuliah</label>
                 <select id="kategori" name="kategori" class="form-control">
-                <option >Pilih</option>
                 <option value="MKMA">Mata Kuliah Major</option>
                 <option value="MKMI">Mata Kuliah Minor</option>
                 <option value="MKPIL">Mata Kuliah Pilihan</option>
