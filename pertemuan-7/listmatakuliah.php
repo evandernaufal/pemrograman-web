@@ -59,7 +59,7 @@
                 if ($jmlRowData < 0) {
                   echo "<tr><td colspan='4'>Data Tidak Terdapat Dalam Database</td></tr>";    
                 }
-                else {
+                else { 
                   while($row = mysqli_fetch_assoc($runStrSQL)) {
               ?>
               <tr>

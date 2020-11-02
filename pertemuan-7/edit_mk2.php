@@ -12,7 +12,7 @@
         include_once "header.php";
         include_once "koneksi.php"; 
         $status = 2;  
-        if (isset($_POST["kodemk"])) {
+        if (isset($_POST["kodemk"])) { 
             $kodemk = $_POST["kodemk"];
             $namamk = $_POST["namamk"];
             $kategori = $_POST["kategori"];
